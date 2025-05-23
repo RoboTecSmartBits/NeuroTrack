@@ -1,0 +1,15 @@
+```mermaid
+flowchart TD
+    A[create_app()] --> B[Load .env variables]
+    B --> C[Initialize Flask app]
+    C --> D[Configure app settings]
+    D --> E[Set up CORS]
+    E --> F[Initialize SQLAlchemy]
+    F --> G[Set up Flask-Migrate]
+    G --> H[Register Blueprints]
+    H --> I[auth_bp]
+    H --> J[users_bp]
+    H --> K[devices_bp]
+    H --> L[parkinson_bp]
+    H --> M[Launch WebSocket Server]
+    M --> N[launch_in_thread()]
